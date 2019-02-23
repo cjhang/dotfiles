@@ -38,7 +38,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Miniconda
 export PATH="$PATH:$HOME/.local/miniconda3/bin"
-alias load='source activate'
-alias quit='source deactivate'
+alias load='conda activate'
+alias quit='conda deactivate'
 
 
