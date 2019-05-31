@@ -3,11 +3,12 @@ HISTFILE=~/.histfile
 setopt histignorespace
 HISTSIZE=20000
 SAVEHIST=20000
-export EDITOR='nvim'
 export CLICOLOR=1
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-alias vi='nvim'
+# set the default editor
+#export EDITOR='nvim'
+#alias vi='nvim'
 alias rm='rm -i'
 
 # for autocompletion
@@ -36,9 +37,9 @@ export HOMEBREW_CASK_OPTS='--appdir="/Users/cjhang/Applications"'
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-# Miniconda
-export PATH="$PATH:$HOME/.local/miniconda3/bin"
-alias load='conda activate'
-alias quit='conda deactivate'
+# Miniconda setting
+#export PATH="$PATH:$HOME/.local/miniconda3/bin"
+#alias load='conda activate'
+#alias quit='conda deactivate'
 
 
