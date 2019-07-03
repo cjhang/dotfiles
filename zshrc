@@ -30,7 +30,8 @@ bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
 # local software
-[ -f $HOME/.local/share/z.sh ] && source $HOME/.local/share/z.sh
+#[ -f $HOME/.local/share/z.sh ] && source $HOME/.local/share/z.sh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && source /usr/local/etc/profile.d/autojump.sh
 export PATH=$PATH:$HOME/.local/bin
 # homebrew
 export HOMEBREW_CASK_OPTS='--appdir="/Users/cjhang/Applications"'
