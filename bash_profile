@@ -8,6 +8,7 @@ export CLICOLOR=1
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 alias rm='rm -i'
+alias ls='ls --color=auto'
 
 # PS1 promp
 PS1="\[\e[34m\]\u\[\e[m\]@\[\e[31m\]\h\[\e[m\]>>\[\e[32m\]\w\[\e[m\]\\$ "
