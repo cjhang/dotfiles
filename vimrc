@@ -4,7 +4,6 @@ set nocompatible "not compatible with vi
 syntax on
 set number
 set wrap
-set history=20000
 set scrolloff=3 "leave three line at the bottom when go to next page
 set nobackup
 set nowritebackup
