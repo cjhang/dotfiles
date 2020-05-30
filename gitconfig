@@ -1,0 +1,9 @@
+[user]
+	name = Jianhang Chen
+	email = cjhastro@gmail.com
+[alias]
+	st = status
+	cm = commit
+	co = checkout
+[diff]
+	submodule = log
