@@ -25,6 +25,7 @@ set shiftwidth=4
 set tabstop=4
 set fillchars=vert:\ ,fold:\   " make fold look more cleaner
 set clipboard=unnamedplus
+set backspace=indent,eol,start " fix the delete key functions in macOS
 set bg=dark
 "set bg=light
 ""}}}
