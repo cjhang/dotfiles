@@ -34,15 +34,12 @@ elif [ -f /etc/bash_completion ]; then
 fi;
 
 # local software
-[ -f $HOME/.local/share/z.sh ] && source $HOME/.local/share/z.sh
 export PATH=$PATH:$HOME/.local/bin
-# homebrew
-export HOMEBREW_CASK_OPTS='--appdir="/Users/cjhang/Applications"'
-export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Miniconda
 export PATH="$PATH:$HOME/.local/miniconda3/bin"
 alias load='conda activate'
 alias quit='conda deactivate'
 
+# python
+export PYTHONPATH="$HOME/.local/python"

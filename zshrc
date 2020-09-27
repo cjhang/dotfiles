@@ -43,4 +43,6 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 #alias load='conda activate'
 #alias quit='conda deactivate'
 
+# python
+export PYTHONPATH="$HOME/.local/python"
 
