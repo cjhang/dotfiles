@@ -15,10 +15,6 @@ alias rm='rm -i'
 autoload -Uz compinit promptinit
 compinit -i
 promptinit
-# make system zsh use homebrew zsh site-functions
-if (( ! ${fpath[(I)/usr/local/share/zsh/site-functions]} )); then
-  FPATH=/usr/local/share/zsh/site-functions:$FPATH
-fi
 
 # prompt
 PROMPT='%F{yellow}%n%f>>%f%F{green}%1~%f%# '
@@ -29,14 +25,20 @@ PROMPT='%F{yellow}%n%f>>%f%F{green}%1~%f%# '
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
+
+# MacOS special
+# make system zsh use homebrew zsh site-functions
+#if (( ! ${fpath[(I)/usr/local/share/zsh/site-functions]} )); then
+  #FPATH=/usr/local/share/zsh/site-functions:$FPATH
+#fi
 # local software
 #[ -f $HOME/.local/share/z.sh ] && source $HOME/.local/share/z.sh
-[ -f /usr/local/etc/profile.d/autojump.sh ] && source /usr/local/etc/profile.d/autojump.sh
-export PATH=$PATH:$HOME/.local/bin
+#[ -f /usr/local/etc/profile.d/autojump.sh ] && source /usr/local/etc/profile.d/autojump.sh
+#export PATH=$PATH:$HOME/.local/bin
 # homebrew
-export HOMEBREW_CASK_OPTS='--appdir="/Users/cjhang/Applications"'
-export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_NO_AUTO_UPDATE=1
+#export HOMEBREW_CASK_OPTS='--appdir="/Users/cjhang/Applications"'
+#export HOMEBREW_NO_ANALYTICS=1
+#export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Miniconda setting
 #export PATH="$PATH:$HOME/.local/miniconda3/bin"
@@ -44,5 +46,5 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 #alias quit='conda deactivate'
 
 # python
-export PYTHONPATH="$HOME/.local/python"
+#export PYTHONPATH="$HOME/.local/python"
 
