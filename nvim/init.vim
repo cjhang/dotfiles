@@ -1,9 +1,9 @@
 " Author: Jianhang Chen
 " Release: 2017-01-28
-" Update: 2017-11-13
-" Version: 0.2
-" Copyright: 2017 cjhang, all rights reserved 
-" Email: chenjianhang2010@gmail.com
+" Update: 2020-01-12
+" Version: 0.2.1
+" Copyright: 2020 cjhang, all rights reserved 
+" Email: cjhastro@gmail.com
 
 "{{{Plugins 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -296,6 +296,16 @@ let g:vimtex_mappings_enabled = 0
 " for latexmk
 let g:vimtex_compiler_enabled = 1
 let g:vimtex_compiler_method = 'latexmk'
+let g:vimtex_compiler_method = 'tectonic'
+let g:vimtex_compiler_tectonic = {
+    \ 'build_dir' : './_build',
+    \ 'options' : [
+    \   '--keep-logs',
+    \   '--synctex'
+    \ ],
+    \}
+
+
 let g:vimtex_compiler_latexmk = {
     \ 'backend' : 'nvim',
     \ 'background' : 1,
