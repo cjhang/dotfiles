@@ -10,7 +10,10 @@ export LC_ALL=en_US.UTF-8
 #export EDITOR='nvim'
 #alias vi='nvim'
 alias rm='rm -i'
+# setting ls color, more clear for directories in removable disk
 alias ls='ls --color'
+export CLICOLOR=1
+export LSCOLORS=exfxcxdxbxegedabagfxfx
 
 # for autocompletion
 autoload -Uz compinit promptinit
@@ -27,6 +30,11 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "$terminfo[kcuu1]" history-beginning-search-backward-end
 bindkey "$terminfo[kcud1]" history-beginning-search-forward-end
+# another unsafe way
+#bindkey "^[[A" history-beginning-search-backward
+#bindkey "^[[B" history-beginning-search-forward
+
+
 
 # MacOS special
 # make system zsh use homebrew zsh site-functions
