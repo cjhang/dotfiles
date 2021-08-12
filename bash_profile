@@ -11,7 +11,7 @@ alias rm='rm -i'
 alias ls='ls --color=auto'
 
 # PS1 promp
-PS1="\[\e[34m\]\u\[\e[m\]@\[\e[31m\]\h\[\e[m\]>>\[\e[32m\]\w\[\e[m\]\\$ "
+PS1="[\[\e[34m\]\u\[\e[m\]@\[\e[31m\]\h\[\e[m\] \[\e[32m\]\w\[\e[m\]]\n\\$ "
 
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
