@@ -4,6 +4,7 @@ setopt histignorespace
 HISTSIZE=20000
 SAVEHIST=20000
 export CLICOLOR=1
+export LSCOLORS=exfxcxdxbxegedabagfxfx
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 # set the default editor
