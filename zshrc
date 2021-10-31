@@ -3,21 +3,25 @@ HISTFILE=~/.histfile
 setopt histignorespace
 HISTSIZE=20000
 SAVEHIST=20000
+export CLICOLOR=1
+export LSCOLORS=exfxcxdxbxegedabagfxfx
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 # set the default editor
-#export EDITOR='nvim'
-#alias vi='nvim'
+export EDITOR='nvim'
+alias vi='nvim'
 alias rm='rm -i'
-# setting ls color, more clear for directories in removable disk
-alias ls='ls --color'
-export CLICOLOR=1
-export LSCOLORS=exfxcxdxbxegedabagfxfx
 
 # for autocompletion
 autoload -Uz compinit promptinit
+# case-insentive autocompletion 
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 compinit -i
 promptinit
+# make system zsh use homebrew zsh site-functions
+if (( ! ${fpath[(I)/usr/local/share/zsh/site-functions]} )); then
+  FPATH=/usr/local/share/zsh/site-functions:$FPATH
+fi
 
 # prompt
 PROMPT='%F{yellow}%n%f>>%f%F{green}%1~%f%# '
