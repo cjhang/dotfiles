@@ -10,6 +10,9 @@ export LC_ALL=en_US.UTF-8
 alias rm='rm -i'
 alias ls='ls --color=auto'
 
+# change the color of full-accessible directories
+export LS_COLORS=$LS_COLORS:'tw=01;35:ow=01;35:'
+
 # PS1 promp
 PS1="[\[\e[34m\]\u\[\e[m\]@\[\e[31m\]\h\[\e[m\] \[\e[32m\]\w\[\e[m\]]\n\\$ "
 
