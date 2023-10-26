@@ -19,7 +19,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'tmhedberg/SimpylFold'
 Plug 'lervag/vimtex'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
 Plug 'Raimondi/delimitMate'
 Plug 'ap/vim-css-color'
 Plug 'hail2u/vim-css3-syntax'
@@ -76,7 +75,7 @@ endif
 "{{{Some Special
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ""set python3 virtual env, no need for install noevim for each env
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python3_host_prog = '/usr/bin/python3'
 
 ""to let the cursor stay at the same place as last time edit"
 autocmd BufReadPost *
@@ -291,25 +290,23 @@ let g:vimtex_toc_enabled = 0
 let g:vimtex_imaps_enabled = 1 "default: 1
 let g:vimtex_imaps_disabled = []
 let g:vimtex_imaps_leader = '`'
-let g:vimtex_index_split_pos = 'topleft'
 let g:vimtex_mappings_enabled = 0
 " for latexmk
 let g:vimtex_compiler_enabled = 1
-let g:vimtex_compiler_method = 'latexmk'
+"let g:vimtex_compiler_method = 'latexmk'
 let g:vimtex_compiler_method = 'tectonic'
 let g:vimtex_compiler_tectonic = {
-    \ 'build_dir' : './_build',
+    \ 'out_dir': './_build',
     \ 'options' : [
     \   '--keep-logs',
     \   '--synctex'
     \ ],
     \}
 
-
 let g:vimtex_compiler_latexmk = {
     \ 'backend' : 'nvim',
     \ 'background' : 1,
-    \ 'build_dir' : './_build',
+    \ 'out_dir': './_build',
     \ 'callback' : 1,
     \ 'continuous' : 0,
     \ 'executable' : 'latexmk',
@@ -324,21 +321,7 @@ let g:vimtex_compiler_latexmk = {
     \ ],
     \}
 
-"let g:vimtex_latexmk_enabled = 1
-"let g:vimtex_latexmk_build_dir = './_build'
-"let g:vimtex_latexmk_continuous = 0
-"let g:vimtex_quickfix_autojump = 0 "set to 0 if continuous is 1
-"let g:vimtex_latexmk_backgroud = 0 "default
-"let g:vimtex_latexmk_options = '-pdflatex="xelatex %O %S" -pdf -dvi- -ps- -silent'
-"let g:vimtex_quickfix_ignore_all_warnings = 0 "default
-"let g:vimtex_quickfix_mode = 1
-let g:vimtex_quickfix_latexlog = {
-      \ 'overfull' : 0,
-      \ 'underfull' : 0,
-      \ 'packages' : {
-      \   'default' : 0,
-      \ },
-      \}
+let g:vimtex_quickfix_enabled = 0
 let g:vimtex_text_obj_enabled = 0
 let g:vimtex_view_enabled = 1 "default
 "let g:vimtex_view_method = 'atril-previewer'
