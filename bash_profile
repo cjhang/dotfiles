@@ -29,6 +29,9 @@ shopt -s cdspell;
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
 
+# allow completion ignore the cases
+bind "set completion-ignore-case on"
+
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -f "/usr/local/share/bash-completion/bash_completion" ]; then
 	source "/usr/local/share/bash-completion/bash_completion";
