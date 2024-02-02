@@ -1,0 +1,2 @@
+escape ^^^
+hardstatus alwayslastline "%{= R}screen @ %H >>   %{= C}%w"
