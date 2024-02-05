@@ -49,3 +49,16 @@ alias quit='conda deactivate'
 
 # python
 export PYTHONPATH="$HOME/.local/python"
+
+# local compiled software
+#export PATH="$HOME/apps/bin:$PATH"
+#export LDFLAGS="-L$HOME/apps/lib $LDFLAGS"
+#export CPPFLAGS="-I$HOME/apps/include $CPPFLAGS"
+#export MANPATH="$HOME/apps/share/man/:$MANPATH"
+#export INFOPATH="$HOME/apps/share/info/:$INFOPATH"
+#export LD_LIBRARY_PATH="$HOME/apps/lib:$LD_LIBRARY_PATH"
+#export CC=gcc-11.4
+#export CXX=c++-11.4
+#export CPP=cpp-11.4
+#export FC=gfortran-11.4
+#export PKG_CONFIG_PATH="$HOME/applications/lib/pkgconfig:$PKG_CONFIG_PATH"
