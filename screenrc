@@ -1,2 +1,4 @@
 escape ^^^
 hardstatus alwayslastline "%{= R}screen @ %H >>   %{= C}%w"
+defscrollback 100000
+termcapinfo xterm ti@:te@
