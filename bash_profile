@@ -50,6 +50,8 @@ alias quit='conda deactivate'
 # python
 export PYTHONPATH="$HOME/.local/python"
 
+alias run='just --justfile ~/.justfile --working-directory $HOME'
+
 # local compiled software
 #export PATH="$HOME/apps/bin:$PATH"
 #export LDFLAGS="-L$HOME/apps/lib $LDFLAGS"

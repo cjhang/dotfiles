@@ -38,6 +38,7 @@ bindkey "$terminfo[kcud1]" history-beginning-search-forward-end
 #bindkey "^[[B" history-beginning-search-forward
 
 
+alias run='just --justfile ~/.justfile --working-directory $HOME'
 
 # MacOS special
 # make system zsh use homebrew zsh site-functions
