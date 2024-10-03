@@ -41,6 +41,7 @@ fi;
 
 # local software
 export PATH=$PATH:$HOME/.local/bin
+# ulimit ulimited
 
 # Miniconda
 export PATH="$PATH:$HOME/.local/miniconda3/bin"
@@ -64,3 +65,4 @@ alias run='just --justfile ~/.justfile --working-directory $HOME'
 #export CPP=cpp-11.4
 #export FC=gfortran-11.4
 #export PKG_CONFIG_PATH="$HOME/applications/lib/pkgconfig:$PKG_CONFIG_PATH"
+

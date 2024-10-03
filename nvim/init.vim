@@ -46,6 +46,7 @@ set expandtab
 set ignorecase
 " about backup
 set nobackup
+set nohidden
 set swapfile
 " about visual
 syntax on
