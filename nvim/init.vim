@@ -1,30 +1,30 @@
 " Author: Jianhang Chen
 " Release: 2017-01-28
-" Update: 2020-01-12
+" Update: 2024-01-14
 " Version: 0.2.1
-" Copyright: 2020 cjhang, all rights reserved 
+" Copyright: 2024 cjhang, all rights reserved 
 " Email: cjhastro@gmail.com
 
 "{{{Plugins 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.config/nvim/plugged')
 "Plug list
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/syntastic'
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
+"Plug 'scrooloose/syntastic'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'vim-airline/vim-airline'
 Plug 'tmhedberg/SimpylFold'
 Plug 'lervag/vimtex'
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 Plug 'Raimondi/delimitMate'
 Plug 'ap/vim-css-color'
-Plug 'hail2u/vim-css3-syntax'
+"Plug 'hail2u/vim-css3-syntax'
 Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
-Plug 'plasticboy/vim-markdown'
+Plug 'preservim/vim-markdown'
 Plug 'Konfekt/FastFold'
 
 call plug#end()
@@ -95,6 +95,12 @@ function! MyFoldText()
 ""highlitgh column if it exceed given column
 highlight OverLength ctermbg=242 ctermfg=white guibg=#592929
 "match OverLength /\%81v.\+/  "enable in the following special group
+"fix the cmd selection menu
+set wildcharm=<C-Z>
+cnoremap <expr> <up> wildmenumode() ? "\<left>" : "\<up>"
+cnoremap <expr> <down> wildmenumode() ? "\<right>" : "\<down>"
+cnoremap <expr> <left> wildmenumode() ? "\<up>" : "\<left>"
+cnoremap <expr> <right> wildmenumode() ? " \<bs>\<C-Z>" : "\<right>"
 "}}}
 
 "{{{Mappings
@@ -234,7 +240,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = {
         \ "mode": "passive",
-        \ "active_filetypes": ["c", "python"],
+        \ "active_filetypes": ["c"],
         \ "passive_filetypes": [] }
 let g:syntastic_python_checkers = ['pyflakes']
 "let g:syntastic_tex_checkers = ['lacheck']
@@ -277,7 +283,7 @@ let g:gitgutter_max_signs = 1000
 
 "{{{vimtex
 """"""""""
-let g:tex_flavor = 'latex'
+let g:tex_flavor = 'pdflatex'
 let g:vimtex_enabled = 1 
 let g:vimtex_fold_enabled = 1
 let g:vimtex_fold_manual = 1
@@ -332,6 +338,7 @@ augroup texmap
     autocmd FileType tex nmap <leader>m <Plug>(vimtex-imaps-list)
     autocmd FileType tex nmap <leader>c :VimtexCompileSS<CR>
     autocmd FileType tex nmap <leader>v :VimtexView<CR>
+    autocmd FileType tex nmap <leader>x :VimtexCompileOutput<CR>
     autocmd FileType tex nmap ]] <Plug>(vimtex-]])
     autocmd FileType tex nmap [[ <Plug>(vimtex-[[)
     autocmd filetype tex set shiftwidth=2
