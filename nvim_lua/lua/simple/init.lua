@@ -6,10 +6,7 @@
 -- Email: cjhastro@gmail.com
 --
 
-require("default.keymaps")
--- lazyvim should load after the keymaps
-require("default.lazy")
-require("default.filetypes")
+require("simple.keymaps")
 
 local opt = vim.opt
 
