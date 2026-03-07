@@ -7,9 +7,9 @@ vim.api.nvim_create_autocmd("FileType", {
     local ok = pcall(vim.treesitter.get_parser, 0, "python")
     if not ok then return end
     vim.opt_local.foldmethod = "expr"
-    vim.opt.foldexpr =  "v:lua.vim.treesitter.foldexpr()" -- skip if Tree-sitter not used
+    vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()" 
     vim.opt_local.foldlevel = 0
-    vim.opt_local.foldnestmax = 2
+    vim.opt_local.foldnestmax = 1
   end,
 })
 

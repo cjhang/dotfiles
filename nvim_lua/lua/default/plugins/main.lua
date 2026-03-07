@@ -22,6 +22,14 @@ return {
     config = function()
       require("nvim-tree").setup {}
     end,
+  },
+
+  {
+    "nxhung2304/lastplace.nvim",
+    config = function()
+      require("lastplace").setup({
+      })
+    end,
   }
 
 }

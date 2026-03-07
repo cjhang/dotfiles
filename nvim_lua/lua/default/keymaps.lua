@@ -13,13 +13,22 @@ keymap.set("n", "<leader>nh", ":nohl<CR>", {desc="Clear search highlights"})
 keymap.set("n", ";;", ":1,$s:::gc<left><left><left><left>", {desc="global replace"})
 
 -- fold management
-keymap.set("n", "<leader>z1", function()
-  vim.o.foldlevel = 1
-end, { desc = "Fold: close all" })
+keymap.set("n", "<leader>f0", function()
+	vim.o.foldlevel = 0
+end, { desc = "Fold all" })
 
-keymap.set("n", "z0", ":set foldlevel=0<CR>", { desc = "Fold: open top level" })
-keymap.set("n", "<leader>f1", ":set foldlevel=1<CR>", { desc = "Fold: open top level" })
-keymap.set("n", "<leader>f2", ":set foldlevel=2<CR>", { desc = "Fold: open top level" })
+keymap.set("n", "<leader>f1", function()
+	vim.o.foldlevel = 1
+end, { desc = "Fold level 1" })
+
+keymap.set("n", "<leader>f2", function()
+	vim.o.foldlevel = 2
+end, { desc = "Fold level 2" })
+
+keymap.set("n", "<leader>f9", function()
+	vim.o.foldlevel = 99
+end, { desc = "Unfold all" })
+
 
 
 ----------------------------
