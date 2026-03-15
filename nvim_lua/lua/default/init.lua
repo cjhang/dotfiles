@@ -51,5 +51,5 @@ opt.backup = false
 opt.hidden = false
 opt.swapfile = true
 
-
-
+-- add folding queries
+opt.runtimepath:append("~/.config/nvim/lua/default")
