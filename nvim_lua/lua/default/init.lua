@@ -53,3 +53,8 @@ opt.swapfile = true
 
 -- add folding queries
 opt.runtimepath:append("~/.config/nvim/lua/default")
+
+-- additional color setup for cmp
+vim.api.nvim_set_hl(0, "PmenuSel", { bg = "#713338" })
+vim.api.nvim_set_hl(0, "Pmenu", { bg = "#806030" })
+
