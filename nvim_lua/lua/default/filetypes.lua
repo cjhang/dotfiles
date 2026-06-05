@@ -19,6 +19,14 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- markdown
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = 'markdown',
+  callback = function()
+    vim.api.nvim_set_hl(0, "markdownError", { link = "Normal" })
+  end,
+})
+
 -- tex
 local texmap_group = vim.api.nvim_create_augroup("texmap", { clear = true })
 -- Autocmd: run on FileType tex
